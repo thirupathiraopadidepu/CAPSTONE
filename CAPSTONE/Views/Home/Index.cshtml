@@ -1,0 +1,150 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" href="Mainlayout.css" />
+</head>
+<body>
+
+    <h1 style="color:blueviolet">Welcome To Flipkart Light Online Shopping</h1><br />
+    <a href="~/Grocery.aspx" style="color:orangered;">Grocery</a>
+    <a href="~/Mobiles.aspx" style="color:blue;">Mobiles</a>
+    <a href="~/Fashion.aspx" style="color:red;">Fashion</a>
+    <a href="~/Electronics.aspx" style="color:green;">Electronics</a>
+    <a href="~/Appliances.aspx" style="color:lightseagreen;">Appliances</a>
+    <a href="~/Travel.aspx" style="color:gray;">Travel</a>
+    <a href="~/Offers.aspx" style="color:darkslategray;">Top Offers</a>
+    <br />
+
+
+
+    <div id="themeSlider" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#themeSlider" data-slide-to="0" class="active"></li>
+            <li data-target="#themeSlider" data-slide-to="1"></li>
+            <li data-target="#themeSlider" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="imgOverlay"></div>
+                <img style="height:320px;width:100%" src="~/Images/a-1.jpg" alt="First slide">
+                <div class="carousel-caption">
+                    <h3>My Home</h3>
+
+                </div>
+            </div>
+            <div class="item">
+                <div class="imgOverlay"></div>
+                <img style="height:320px;width:100%" src="~/Images/a-2.jpg" alt="Second slide">
+                <div class="carousel-caption">
+                    <h3>Top Offers On Headphones</h3>
+
+                </div>
+            </div>
+            <div class="item">
+                <div class="imgOverlay"></div>
+                <img style="height:320px;width:100%" src="~/Images/a-3.jpg" alt="Third slide">
+                <div class="carousel-caption">
+                    <h3>Fun Day With Games</h3>
+
+                </div>
+            </div>
+            <div class="item">
+                <div class="imgOverlay"></div>
+                <img style="height:320px;width:100%" src="~/Images/a-4.jpg" alt="Third slide">
+                <div class="carousel-caption">
+                    <h3></h3>
+
+                </div>
+            </div>
+        </div>
+
+        <a class="left carousel-control" href="#themeSlider" data-slide="prev">
+            <span class="fa fa-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#themeSlider" data-slide="next">
+            <span class="fa fa-chevron-right"></span>
+        </a>
+    </div>
+    <div class="olContent f1"><h2 style="color:black">Search Product/Category</h2></div>
+
+    <div class="olSearch fr">
+        <input type="text" name="search" placeholder="Enter Keyword" class="inputComn form-control" />
+        <div class="searchIcon">
+            <button type="submit" class="searchBtn">
+                <img src="~/Images/search-heart_ZMV68CP1o.svg" />
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="page-header">
+                <h2>Our Producrs <small>trends products</small></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="row product-container">
+
+        <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
+            <div class="thumbnail product-item" style="height:300px">
+
+                <img class="img-responsive" title="Click to View Product detail"
+                     style="cursor:pointer;height:160px;width:100%"
+                     src="~/Images/Apple-iPhone-14.jpg" />
+
+                <div class="caption">
+                    <h5>Apple iphone</h5>
+                    <p>Price : &#x20b9; 13500</p>
+                    <p>Available</p>
+                    <div class="product-item-badge">New</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
+            <div class="thumbnail product-item" style="height:300px">
+
+                <img class="img-responsive" title="Click to View Product detail"
+                     style="cursor:pointer;height:160px;width:100%"
+                     src="~/Images/watch.jfif" />
+
+                <div class="caption">
+                    <h5>Boat</h5>
+                    <p>Price : &#x20b9; 5500</p>
+                    <p>Available</p>
+                    <div class="product-item-badge">New</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
+            <div class="thumbnail product-item" style="height:300px">
+
+                <img class="img-responsive" title="Click to View Product detail"
+                     style="cursor:pointer;height:160px;width:100%"
+                     src="~/Images/i-1.jfif" />
+
+                <div class="caption">
+                    <h5>Hp Laptop</h5>
+                    <p>Price : &#x20b9; 65500</p>
+                    <p>Available</p>
+                    <div class="product-item-badge">New</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
+            <div class="thumbnail product-item" style="height:300px">
+
+                <img class="img-responsive" title="Click to View Product detail"
+                     style="cursor:pointer;height:160px;width:100%"
+                     src="~/Images/gadgets.jfif" />
+
+                <div class="caption">
+                    <h5>Gadgets</h5>
+                    <p>Price Upto: &#x20b9; 13500</p>
+                    <p>Available</p>
+                    <div class="product-item-badge">New</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

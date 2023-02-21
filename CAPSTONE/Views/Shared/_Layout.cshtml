@@ -1,0 +1,129 @@
+﻿@{ 
+    bool isLoggedIn = true;
+    if(string.IsNullOrWhiteSpace(User.Identity.Name))
+    {
+        isLoggedIn = false;
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/MyMainLayOut.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Flipkart Light", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    @*<li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                    
+
+                    @{
+                        if (isLoggedIn)
+                        {
+                            <li>@Html.ActionLink(User.Identity.Name, "Index", "Home")</li>
+                            <li>@Html.ActionLink("Signout", "Signout", "Account")</li>
+                        }
+                        else
+                        {
+                               <li>@Html.ActionLink("Login", "Login", "Account")</li>
+                               <li>@Html.ActionLink("Registration", "Signup", "Account")</li>
+                        }
+
+                    })
+                <li>@Html.ActionLink("Admin", "Login", "Admin_tb")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+       
+        <footer>
+           
+            <div class="container">
+                <div class="row">
+                    
+                    
+                    <div class="col-md-4">
+                        <div class="ftco-footer-widget mb-4">
+                            <h2 class="ftco-heading-2">Menu</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="py-2 d-block">Shop</a></li>
+                                <li><a href="About.cshtml" class="py-2 d-block">About</a></li>
+                                <li><a href="#" class="py-2 d-block">Journal</a></li>
+                                <li><a href="#" class="py-2 d-block">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="ftco-footer-widget mb-4">
+                            <h2 class="ftco-heading-2">Help</h2>
+                            <div class="d-flex">
+                                <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
+                                    <li><a href="#" class="py-2 d-block">Shipping Information</a></li>
+                                    <li><a href="#" class="py-2 d-block">Returns &amp; Exchange</a></li>
+                                    <li><a href="#" class="py-2 d-block">Terms &amp; Conditions</a></li>
+                                    <li><a href="#" class="py-2 d-block">Privacy Policy</a></li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="py-2 d-block">FAQs</a></li>
+                                    <li><a href="#" class="py-2 d-block">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="ftco-footer-widget mb-4">
+                            <h2 class="ftco-heading-2">Have a Questions?</h2>
+                            <div class="block-23 mb-3">
+                                <ul>
+                                    
+                                    <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 7392 3929 21</span></a></li>
+                                    <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@FlipkartLite.com</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+
+                        <p>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright ©
+                            <script>document.write(new Date().getFullYear());</script>2022 All rights reserved  <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://FlipkartLight.com" target="_blank">Flipkart Light</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </footer> 
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
